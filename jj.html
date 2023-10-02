@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Number validation in JavaScript
+	</title>
+	<script>
+		/* this function is called when we
+			click on the submit button*/
+		function numberValidation() {
+			event.preventDefault();
+			let n = document.form.numbers.value;
+
+			if (isNaN(n)) {
+				document.getElementById("numberText")
+					.innerHTML = "Please enter Numeric value";
+				return false;
+			} else {
+				document.getElementById("numberText")
+					.innerHTML = "Numeric value is: " + n;
+				return true;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/geeksforgeeks-6.png"
+		alt="Avatar"
+		style="width: 200px;" />
+	<form action="#" name="form" onsubmit="numberValidation()">
+		Number: <input type="text" name="numbers" />
+		<span id="numberText"></span>
+		<br />
+		<input type="submit" value="submit" />
+	</form>
+</body>
+</html>
