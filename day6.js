@@ -76,4 +76,4 @@ function res(){
 function rej(){
     console.log('go for pasta');
 }
-result.then(res).catch(rej)
+result.then(res).catch(rej)-
